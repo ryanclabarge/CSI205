@@ -1,6 +1,11 @@
+import javax.swing.JOptionPane;
+
 public class UseSummer{
 	public static void main(String[] args){
+	int n;
 	Summer sum = new Summer();
-	System.out.println(sum.Accumulate(Integer.parseInt(args[0])));
+	n = Integer.parseInt(JOptionPane.showInputDialog(null,"Please enter an Integer"));
+	int answer = sum.Accumulate(n);
+	JOptionPane.showMessageDialog(null,answer);
 	}
 }
