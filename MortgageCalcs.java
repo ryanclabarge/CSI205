@@ -41,22 +41,16 @@ public class MortgageCalcs{
 		double newPrin = principal;//sets starting principal equal to the initial principal
 		double payment = calcPayment();//gets the payment for each month
 		double monthlyRate = (interestRate/100.0/12.0);//calculates the monthly interest rate
-		if (months>=(term*12)){//returns false if outside of the term limit
-			return false;
-		}
-		else {
-			System.out.printf("%s %s %s %2s %2s%n","Month","Payment Amount","Interest","Principal","Balance");//prints the headers for each column
-			for (int i = 0;i<=months;i++){//starts a for loop for printing the amortization table
-				if (i == 0) System.out.printf("%,49.2f%n",newPrin);
-				else{
-				System.out.printf("%-10d%-11.2f%-9.2f%-10.2f%,.2f%n",i,payment, (newPrin*monthlyRate), (payment-(newPrin*monthlyRate)),newPrin-(payment-(newPrin*monthlyRate)));//prints the valuse in the table
+		if (0<months && months<=(term*12)){//returns true if between the term limits
+			System.out.printf("%s %s %s %2s %2s%n%,49.2f%n","Month","Payment Amount","Interest","Principal","Balance",principal);//prints the headers for each column and principal in the second row
+			for (int i =1;i<=months;i++){ 		
+				System.out.printf("%-10d%-11.2f%-9.2f%-10.2f%,.2f%n",i,payment,(newPrin*monthlyRate), (payment-(newPrin*monthlyRate)),newPrin-(payment-(newPrin*monthlyRate)));//prints the valuse in the table
 				newPrin = newPrin-(payment-(newPrin*monthlyRate));//sets the new principal for the next month
-				}
 			}
-		}
 		return true;
+		}	
+		else return false;
 	}
-
 
 
 }//end class definition
