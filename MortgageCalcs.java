@@ -44,7 +44,7 @@ public class MortgageCalcs{
 		if (0<months && months<=(term*12)){//returns true if between the term limits
 			System.out.printf("%s %s %s %2s %2s%n%,49.2f%n","Month","Payment Amount","Interest","Principal","Balance",principal);//prints the headers for each column and principal in the second row
 			for (int i =1;i<=months;i++){ 		
-				System.out.printf("%-10d%-11.2f%-9.2f%-10.2f%,.2f%n",i,payment,(newPrin*monthlyRate), (payment-(newPrin*monthlyRate)),newPrin-(payment-(newPrin*monthlyRate)));//prints the valuse in the table
+				System.out.printf("%3d%14.2f%11.2f%9.2f%,12.2f%n",i,payment,(newPrin*monthlyRate), (payment-(newPrin*monthlyRate)),newPrin-(payment-(newPrin*monthlyRate)));//prints the valuse in the table
 				newPrin = newPrin-(payment-(newPrin*monthlyRate));//sets the new principal for the next month
 			}
 		return true;
