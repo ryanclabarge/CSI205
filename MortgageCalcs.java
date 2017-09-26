@@ -30,9 +30,11 @@ public class MortgageCalcs{
 	public double getinterestRate(){//gets the interest rate
 		return interestRate;
 	}
+	
 	public double getterm(){//gets the term in years
 		return term;
 	}
+	
 	public double getprincipal(){//gets the starting principal
 		return principal;
 	}
