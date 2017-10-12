@@ -52,14 +52,14 @@ public class UseMortgageCalcs{
 					break;
 			
 				case 3:
-					System.out.printf("%n%s:%s%n","Interest Charge:",formatter.format(mort.intCharge()));
+					System.out.printf("%n%s:%s%n","Interest Charge",formatter.format(mort.intCharge()));
 					menu();
 					t = scan.nextInt();
 					break;
 			
 				case 4:
 					System.out.printf("%n%s:%s","Payment",formatter.format(mort.calcPayment()));
-					System.out.printf("%n%s:%s","Interest Charge:",formatter.format(mort.intCharge()));
+					System.out.printf("%n%s:%s","Interest Charge",formatter.format(mort.intCharge()));
 					System.out.printf("%n%s:%s%n","Payment",formatter.format(mort.calcPayment()));
 					menu();
 					t = scan.nextInt();

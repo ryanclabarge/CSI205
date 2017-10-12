@@ -2,10 +2,10 @@
 public class MortgageCalcs{
 	private double interestRate, term, principal;
 	
-	public MortgageCalcs(double ir, double t, double p){
-		interestRate = ir;
-		term = t;
-		principal = p;
+	public MortgageCalcs(double interestRate, double term, double principal){
+		this.interestRate = interestRate;
+		this.term = term;
+		this.principal = principal;
 	}
 	
 	public double calcPayment(){//this creates the calcPayment Mehtod
