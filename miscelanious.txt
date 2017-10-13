@@ -1,0 +1,7 @@
+final int i = 5; \\ this defines a constant vaibale 5, can not be changed, trying to do so will throw a syntax error
+
+promotion and casting \\ data types get promoted to higher data types so all data types match
+			 casting is when you temporarily change a data type to a different type
+			 casting is done by putting the data type in paranthesis i.e (float),(int)
+
+Static class definitions do not need "new"

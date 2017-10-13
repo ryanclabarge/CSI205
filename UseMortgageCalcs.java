@@ -59,8 +59,8 @@ public class UseMortgageCalcs{
 			
 				case 4:
 					System.out.printf("%n%s:%s","Payment",formatter.format(mort.calcPayment()));
-					System.out.printf("%n%s:%s","Interest Charge",formatter.format(mort.intCharge()));
-					System.out.printf("%n%s:%s%n","Payment",formatter.format(mort.calcPayment()));
+			       		System.out.printf("%n%s:%s","Future Value",formatter.format(mort.futureValue()));
+					System.out.printf("%n%s:%s%n","Interest Charge",formatter.format(mort.intCharge()));
 					menu();
 					t = scan.nextInt();
 					break;
